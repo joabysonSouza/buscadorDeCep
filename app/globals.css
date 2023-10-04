@@ -1,27 +1,67 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #807f7f3a;
+}
+.container{
+  width: 80%;
+  height: 80vh;
+  margin: 90px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,73,121,0.7903536414565826) 27%, rgba(0,212,255,1) 100%);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container h1{
+  padding: 32px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.container h1{
+  color: white;
+  text-align: center;
+  animation: flip 2s;
+}
+
+.card input{
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  
+}
+
+.searchIcon{
+  cursor: pointer;
+  margin-left: 1.5em;
+  transition: all 2s;
+  
+}
+
+.searchIcon:hover{
+  transform: scale(1.2);
+}
+
+.container section{
+  font-weight: 800;
+  background-color: white;
+  width: 400px;
+  height: auto;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 2em;
+}
+@keyframes flip {
+  from{
+      transform: rotateX(180deg);
+  }
+  to{
+      transform: rotateX(0deg);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
+
